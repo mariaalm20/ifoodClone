@@ -20,9 +20,6 @@ O IFOOD UI CLONE é um projeto com o objetivo de testar minhas habilidades com o
 
 ----> Quem quiser saber mais a série é essa:
 
-
-## 🖥 Tecnologias
-
  ## 📦 Instalação
 
 ```bash
