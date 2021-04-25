@@ -1,20 +1,21 @@
 import styled from 'styled-components/native';
+import * as colors from '../../Themes/Colors';
 
 export const Container = styled.View`
-  justify-content: center;
-  border-radius: 20;
   border-style: solid;
+  border-radius: 28;
   border-width: 1px;
-  border-color: #eeee;
+  border-color: ${colors.lightGrey};
+  justify-content: center;
   align-items: center;
-  margin-right: 20px;
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 4px;
   padding-bottom: 4px;
+  margin-right: 16px;
 `;
 
 export const Title = styled.Text`
-  color: rgba(63, 62, 61, 0.7);
+  color: rgba(63, 52, 61, 0.7);
   font-family: 'RedHatDisplay-Medium';
 `;

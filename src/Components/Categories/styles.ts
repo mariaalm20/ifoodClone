@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import * as colors from '../../Themes/Colors';
 
 interface IMarket {
   isMarket: boolean;
@@ -7,7 +8,6 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  border-radius: 10px;
 `;
 
 export const CategoryImage = styled.Image<IMarket>`
@@ -16,8 +16,8 @@ export const CategoryImage = styled.Image<IMarket>`
 `;
 
 export const Title = styled.Text`
-  color: #a6a29f;
+  font-family: 'RedHatDisplay-Medium';
   font-size: 12px;
   margin-top: 8px;
-  font-family: 'RedHatDisplay-Medium';
+  color: ${colors.textPrimary};
 `;

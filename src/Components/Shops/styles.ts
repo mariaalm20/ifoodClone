@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import * as colors from '../../Themes/Colors';
 
 interface IProps {
   isAvaliation?: boolean;
@@ -26,10 +27,9 @@ export const ContentRight = styled.View`
 export const ContainerLogo = styled.View`
   width: 50px;
   height: 50px;
-  border-radius: 25px;
   border-style: solid;
   border-width: 1px;
-  border-color: #eee;
+  border-color: ${colors.lightGrey};
 `;
 
 export const LogoShop = styled.Image`
@@ -54,7 +54,7 @@ export const ContainerAvaliation = styled(InfoShop)`
 `;
 
 export const Title = styled.Text<IProps>`
-  color: #3f3e3e;
+  color: ${colors.grey};
   font-size: ${props => (props.isList ? 16 : 18)};
   font-family: ${props =>
     props.isList ? 'RedHatDisplay-Medium' : 'RedHatDisplay-Bold'};
@@ -63,9 +63,9 @@ export const Title = styled.Text<IProps>`
 `;
 
 export const Subtitle = styled.Text<IProps>`
-  color: ${props => (props.isAvaliation ? '#FFB761' : '#A6A29F')};
-  font-size: 13px;
-  font-family: 'RedHatDisplay-Medium';
+  color: ${props =>
+    props.isAvaliation ? colors.avaliation : colors.textPrimary};
+  font-size: 14px;
 `;
 
 export const Separator = styled(Ionicons)`

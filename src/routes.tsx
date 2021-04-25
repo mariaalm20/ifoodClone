@@ -8,9 +8,7 @@ import {HeaderLeft, HeaderRight} from './Components';
 
 const Stack = createStackNavigator();
 
-
 function Routes() {
-
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">

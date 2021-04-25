@@ -1,6 +1,6 @@
 import React from 'react';
 import {Dimensions, StatusBar, Animated} from 'react-native';
-import data from './data';
+import {products} from '../../utils/data';
 import Categories from '../../Components/Categories';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -19,12 +19,13 @@ import {
   PaginationDotContainer,
   PaginationIndicator,
   TextContainer,
-  TickerText,
+  NameProduct,
   ImageContainer,
+  TitleDescription,
 } from './styles';
 
 const {width} = Dimensions.get('window');
-const DOT_SIZE = 40;
+const CIRCLE_SIZE = 40;
 
 const Item = ({imageUri, type, description, index, scrollX, price}) => {
   const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
@@ -42,7 +43,7 @@ const Item = ({imageUri, type, description, index, scrollX, price}) => {
   return (
     <ItemStyle>
       <ImageContainer>
-        <TickerText>{type}</TickerText>
+        <NameProduct>{type}</NameProduct>
         <ImageStyle
           source={imageUri}
           style={[
@@ -60,7 +61,7 @@ const Item = ({imageUri, type, description, index, scrollX, price}) => {
         <SafeAreaView style={{marginTop: width * 0.56}}>
           <Title>Igredientes</Title>
           <Categories />
-          <Title style={{marginTop: 20}}>Descrição</Title>
+          <TitleDescription>Descrição</TitleDescription>
           <Description
             style={[
               {
@@ -91,7 +92,7 @@ const Pagination = ({scrollX}) => {
   const inputRange = [-width, 0, width];
   const translateX = scrollX.interpolate({
     inputRange,
-    outputRange: [-DOT_SIZE, 0, DOT_SIZE],
+    outputRange: [-CIRCLE_SIZE, 0, CIRCLE_SIZE],
   });
   return (
     <Paginate>
@@ -102,7 +103,7 @@ const Pagination = ({scrollX}) => {
           },
         ]}
       />
-      {data.map(item => {
+      {products.map(item => {
         return (
           <PaginationDotContainer key={item.key}>
             <PaginationDot />
@@ -121,7 +122,7 @@ export default function Products() {
       <StatusBar style="auto" hidden />
       <Animated.FlatList
         keyExtractor={item => item.key}
-        data={data}
+        data={products}
         renderItem={({item, index}) => (
           <Item {...item} index={index} scrollX={scrollX} />
         )}

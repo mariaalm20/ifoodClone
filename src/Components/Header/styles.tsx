@@ -1,16 +1,17 @@
 import styled from 'styled-components/native';
-import {Colors} from '../../Themes';
+import * as colors from '../../Themes/Colors';
 
-interface IColor {
-  color: typeof Colors;
-}
-export const Container = styled.View`
+export const ContainerLeft = styled.View`
   flex-direction: row;
   align-items: center;
 `;
 
-export const Title = styled.Text<IColor>`
-  color: #000;
+export const ContainerRight = styled.View`
+  padding-right: 10px;
+`;
+
+export const Title = styled.Text`
+  color: ${colors.black};
   font-size: 16px;
   font-family: 'RedHatDisplay-Medium';
 `;

@@ -1,6 +1,5 @@
 import React from 'react';
-import {Tabs} from '../../Components';
-//import {Container} from './styles';
+import Tabs from '../../Tabs';
 
 const Home: React.FC = () => {
   return <Tabs />;
