@@ -1,6 +1,6 @@
 # ifoodClone
 <p align="center">
-    <img width="220" src="https://user-images.githubusercontent.com/50887367/116004766-a6832c00-a5da-11eb-9f0b-cc89d41237b5.jpg">
+    <img width="400" src="https://user-images.githubusercontent.com/50887367/116004766-a6832c00-a5da-11eb-9f0b-cc89d41237b5.jpg">
 </p>
 
 <h1 align="center">IFOOD UICLONE🚀</h1>
@@ -26,7 +26,7 @@ O IFOOD UI CLONE é um projeto com o objetivo de testar minhas habilidades com o
  ## 📦 Instalação
 
 ```bash
-git clone https://github.com/mariaalm20/TinWoman.git
+git clone https://github.com/mariaalm20/ifoodClone.git
 ```
 
 ```bash
