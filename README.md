@@ -1,4 +1,4 @@
-# ifoodClone
+# IfoodUIClone
 <p align="center">
     <img width="400" src="https://user-images.githubusercontent.com/50887367/116004766-a6832c00-a5da-11eb-9f0b-cc89d41237b5.jpg">
 </p>
